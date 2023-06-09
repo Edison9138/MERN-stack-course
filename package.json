@@ -7,7 +7,6 @@
   "scripts": {
     "setup-production": "npm run install-client && npm run build-client && npm install",
     "install-client": "cd client && npm install",
-    "build": "set INLINE_RUNTIME_CHUNK=false&&react-scripts build",
     "build-client": "cd client && npm run build",
     "server": "nodemon server --ignore client",
     "client": "npm start --prefix client",
