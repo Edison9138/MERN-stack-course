@@ -102,4 +102,10 @@ const start = async () => {
   }
 };
 
+webpackConfig.resolve = {
+  fallback: {
+    "url": require.resolve("url/")
+  }
+};
+
 start();
