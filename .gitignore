@@ -1,0 +1,5 @@
+# files too massive
+/node_modules
+
+# don't want to expose sensitive data
+.env
