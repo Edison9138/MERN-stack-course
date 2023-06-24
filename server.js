@@ -31,6 +31,15 @@ import notFoundMiddleware from "./middleware/not-found.js";
 import errorHandlerMiddleware from "./middleware/error-handler.js";
 import authenticateUser from "./middleware/auth.js";
 
+// enable inline execution for successful render (not recommended?)
+app.use((req, res, next) => {
+  res.setHeader(
+    'Content-Security-Policy',
+    "script-src 'self' 'unsafe-inline';"
+  );
+  next();
+});
+
 if (process.env.NODE_ENV !== "production") {
   app.use(morgan("dev"));
 }
