@@ -7,6 +7,7 @@
   "scripts": {
     "setup-production": "npm run install-client && npm run build-client && npm install",
     "install-client": "cd client && npm install",
+    "build": "cross-env INLINE_RUNTIME_CHUNK=false react-scripts build",
     "build-client": "cd client && npm run build",
     "server": "nodemon server --ignore client",
     "client": "npm start --prefix client",
@@ -17,6 +18,7 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.0.1",
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.22"
   },
   "dependencies": {
